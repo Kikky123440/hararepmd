@@ -1,0 +1,210 @@
+/* General Body Styling */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: black url("mohcc-logo.png") no-repeat center center fixed;
+  background-size: 400px;
+  color: white;
+  overflow-x: hidden;
+  text-align: center;
+}
+
+/* Header */
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #111;
+  padding: 10px 40px;
+}
+.main-header img {
+  height: 80px;
+}
+.header-center {
+  flex: 1;
+  text-align: center;
+}
+.header-center h1 {
+  color: yellow;
+  margin: 0;
+  font-size: 28px;
+}
+.header-center h2 {
+  color: white;
+  margin: 5px 0 0;
+  font-size: 16px;
+}
+
+/* Navigation Bar */
+nav {
+  background: green;
+  text-align: center;
+  padding: 12px 0;
+}
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+nav ul li {
+  display: inline-block;
+  margin: 0 20px;
+}
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s, border-bottom 0.3s;
+  padding: 5px;
+}
+nav ul li a:hover {
+  color: red;
+}
+nav ul li a.active {
+  color: yellow;
+  border-bottom: 2px solid yellow;
+}
+/* Districts Covered Section */
+.districts {
+  background: rgba(0, 128, 0, 0.2); /* faint green highlight */
+  border: 2px solid yellow;
+  border-radius: 12px;
+  padding: 20px;
+  margin-top: 25px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 0 15px rgba(255,255,0,0.5);
+}
+.districts h3 {
+  color: yellow;
+  margin-bottom: 15px;
+  font-size: 22px;
+}
+.districts ul {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
+}
+.districts ul li {
+  background: rgba(255,255,255,0.1);
+  padding: 10px;
+  border-radius: 8px;
+  transition: transform 0.3s, background 0.3s;
+}
+.districts ul li:hover {
+  background: red;
+  color: white;
+  transform: scale(1.05);
+}
+/* Districts List Links */
+.districts ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  display: block;
+  padding: 6px;
+  border-radius: 6px;
+  transition: background 0.3s;
+}
+.districts ul li a:hover {
+  background: red;
+  color: white;
+}
+
+/* Section Styling */
+.section {
+  padding: 40px 20px;
+  background: rgba(0, 0, 0, 0.6);
+  margin: 20px;
+  border-radius: 12px;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Services Styling */
+.service {
+  background: rgba(255,255,255,0.05);
+  padding: 15px;
+  margin: 15px auto;
+  border-left: 4px solid yellow;
+  max-width: 800px;
+  text-align: left;
+  border-radius: 8px;
+}
+
+/* FAQ Styling */
+.faq {
+  text-align: left;
+  max-width: 800px;
+  margin: 20px auto;
+  background: rgba(255,255,255,0.05);
+  padding: 15px;
+  border-left: 4px solid red;
+  border-radius: 8px;
+}
+.faq p {
+  margin: 8px 0;
+}
+
+/* Department List */
+.dept-list {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+.dept-list li {
+  margin: 10px 0;
+}
+.dept-list li a {
+  color: yellow;
+  text-decoration: none;
+  font-weight: bold;
+}
+.dept-list li a:hover {
+  color: red;
+}
+
+/* Footer */
+footer {
+  background: #111;
+  padding: 15px;
+  margin-top: 30px;
+  font-size: 14px;
+  color: #bbb;
+}
+
+/* Bubble Animation */
+.bubbles span {
+  position: absolute;
+  bottom: -50px;
+  width: 20px;
+  height: 20px;
+  background: rgba(255,255,255,0.2);
+  border-radius: 50%;
+  animation: rise 20s infinite ease-in;
+}
+.bubbles span:nth-child(1) { left: 10%; animation-duration: 15s; }
+.bubbles span:nth-child(2) { left: 20%; animation-duration: 20s; }
+.bubbles span:nth-child(3) { left: 25%; animation-duration: 18s; }
+.bubbles span:nth-child(4) { left: 40%; animation-duration: 22s; }
+.bubbles span:nth-child(5) { left: 70%; animation-duration: 17s; }
+.bubbles span:nth-child(6) { left: 80%; animation-duration: 19s; }
+.bubbles span:nth-child(7) { left: 90%; animation-duration: 16s; }
+
+@keyframes rise {
+  0% { transform: translateY(0); opacity: 0; }
+  50% { opacity: 1; }
+  100% { transform: translateY(-800px); opacity: 0; }
+}
+
+/* SPA Hidden Class */
+.hidden {
+  display: none;
+}
+
+
