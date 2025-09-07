@@ -2,69 +2,138 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
-  background: black url("mohcc-logo.png") no-repeat center center fixed;
-  background-size: 400px;
-  color: white;
+  font-family: 'Segoe UI', 'Arial', sans-serif;
+  background: linear-gradient(135deg, #0a2e4d 0%, #1e7e34 100%);
+  color: #f5f5f5;
   overflow-x: hidden;
   text-align: center;
+  font-size: 18px;
+  line-height: 1.7;
+  letter-spacing: 0.02em;
+  min-height: 100vh;
 }
 
 /* Header */
 .main-header {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  background: #111;
-  padding: 10px 40px;
+  background: rgba(17, 17, 17, 0.95);
+  padding: 18px 40px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+  border-bottom: 3px solid #1e7e34;
+  width: 100%;
+  position: relative;
+  z-index: 10;
+  min-height: 90px;
 }
-.main-header img {
-  height: 80px;
+
+
+.header-left img {
+  height: 70px;
+  border-radius: 50%;
+  box-shadow: 0 0 8px #1e7e34;
+  max-width: 100%;
+}
+.header-right {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  min-width: 70px;
+  justify-content: flex-end;
+  padding-left: 10px;
+}
+.header-right img {
+  height: 70px;
+  border-radius: 50%;
+  box-shadow: 0 0 8px #1e7e34;
+  max-width: 100%;
+}
+.header-right img.logo {
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  box-shadow: 0 0 8px #1e7e34;
+  object-fit: cover;
+  max-width: 100%;
+  display: block;
 }
 .header-center {
-  flex: 1;
+  flex: 1 1 auto;
   text-align: center;
+  min-width: 0;
+  padding: 0 10px;
 }
 .header-center h1 {
-  color: yellow;
+  color: #1e7e34;
   margin: 0;
-  font-size: 28px;
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-shadow: 2px 2px 8px #000;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .header-center h2 {
-  color: white;
-  margin: 5px 0 0;
-  font-size: 16px;
+  color: #f5f5f5;
+  margin: 8px 0 0;
+  font-size: 18px;
+  font-weight: 400;
+  text-shadow: 1px 1px 6px #000;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 /* Navigation Bar */
 nav {
-  background: green;
+  background: linear-gradient(90deg, #1e7e34 0%, #0a2e4d 100%);
   text-align: center;
-  padding: 12px 0;
+  padding: 10px 0 10px 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+  margin-top: 0;
+  position: relative;
+  z-index: 9;
+  width: 100%;
 }
 nav ul {
   list-style: none;
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 }
-nav ul li {
-  display: inline-block;
-  margin: 0 20px;
-}
+/*nav ul li {*/
+/*  display: inline-block;*/
+/*  margin: 0 8px;*/
+/*}*/
 nav ul li a {
-  color: white;
+  color: #fff;
   text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s, border-bottom 0.3s;
-  padding: 5px;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+  white-space: nowrap;
 }
 nav ul li a:hover {
-  color: red;
+  background: #fff;
+  color: #1e7e34;
+  box-shadow: 0 2px 8px #1e7e34;
 }
 nav ul li a.active {
-  color: yellow;
-  border-bottom: 2px solid yellow;
+  background: #1e7e34;
+  color: #fff;
+  box-shadow: 0 2px 8px #1e7e34;
+  border-bottom: 3px solid #fff;
 }
+
 /* Districts Covered Section */
 .districts {
   background: rgba(0, 128, 0, 0.2); /* faint green highlight */
@@ -76,6 +145,8 @@ nav ul li a.active {
   margin-left: auto;
   margin-right: auto;
   box-shadow: 0 0 15px rgba(255,255,0,0.5);
+  color: #f5f5f5;
+  font-size: 18px;
 }
 .districts h3 {
   color: yellow;
@@ -117,24 +188,76 @@ nav ul li a.active {
 
 /* Section Styling */
 .section {
-  padding: 40px 20px;
-  background: rgba(0, 0, 0, 0.6);
-  margin: 20px;
-  border-radius: 12px;
-  max-width: 1000px;
-  margin-left: auto;
-  margin-right: auto;
+  padding: 48px 24px 64px 24px;
+  background: rgba(255,255,255,0.07);
+  margin: 32px auto 80px auto;
+  border-radius: 18px;
+  max-width: 1100px;
+  box-shadow: 0 4px 32px rgba(30,126,52,0.12);
+  color: #222;
+  font-size: 20px;
+}
+.section h3, .section h4 {
+  color: #1e7e34;
+  font-weight: 700;
+  margin-bottom: 18px;
+  text-shadow: 1px 1px 6px #fff;
 }
 
-/* Services Styling */
-.service {
-  background: rgba(255,255,255,0.05);
-  padding: 15px;
-  margin: 15px auto;
-  border-left: 4px solid yellow;
-  max-width: 800px;
+/* Cards & Highlights */
+.card, .service-highlight, .department-highlight, .welcome, .news, .contact-form, .team {
+  background: rgba(255,255,255,0.15);
+  border-radius: 12px;
+  box-shadow: 0 2px 16px rgba(30,126,52,0.10);
+  padding: 24px;
+  margin: 24px auto;
+  max-width: 700px;
+  color: #222;
+}
+
+/* Lists */
+ul, ol {
   text-align: left;
-  border-radius: 8px;
+  margin: 0 auto 18px auto;
+  padding-left: 32px;
+  max-width: 700px;
+  font-size: 18px;
+}
+ul li, ol li {
+  margin-bottom: 8px;
+  line-height: 1.6;
+}
+
+/* Buttons */
+button, input[type="submit"] {
+  background: #1e7e34;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 24px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 8px #1e7e34;
+  transition: background 0.3s, color 0.3s;
+}
+button:hover, input[type="submit"]:hover {
+  background: #0a2e4d;
+  color: #fff;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 14px;
+  border-radius: 6px;
+  border: 1px solid #1e7e34;
+  font-size: 18px;
+  background: #f5f5f5;
+  color: #222;
+}
+input:focus, textarea:focus {
+  outline: 2px solid #1e7e34;
 }
 
 /* FAQ Styling */
@@ -146,6 +269,8 @@ nav ul li a.active {
   padding: 15px;
   border-left: 4px solid red;
   border-radius: 8px;
+  color: #f5f5f5;
+  font-size: 18px;
 }
 .faq p {
   margin: 8px 0;
@@ -171,11 +296,22 @@ nav ul li a.active {
 
 /* Footer */
 footer {
-  background: #111;
-  padding: 15px;
-  margin-top: 30px;
-  font-size: 14px;
-  color: #bbb;
+  background: linear-gradient(90deg, #1e7e34 0%, #0a2e4d 100%);
+  padding: 22px 0 18px 0;
+  font-size: 18px;
+  color: #fff;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 100;
+  box-shadow: 0 -2px 16px rgba(30,126,52,0.18);
+  text-align: center;
+  letter-spacing: 0.04em;
+}
+footer p {
+  margin: 0;
+  font-weight: 600;
 }
 
 /* Bubble Animation */
@@ -207,4 +343,131 @@ footer {
   display: none;
 }
 
+/* Responsive Design */
+@media (max-width: 900px) {
+  .main-header {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 12px 10px;
+    min-height: 120px;
+  }
+  .header-left, .header-right {
+    justify-content: center;
+    min-width: 0;
+  }
+  .header-right {
+    justify-content: center;
+    padding-left: 0;
+  }
+  .header-right img.logo {
+    height: 48px;
+    width: 48px;
+  }
+  .header-right img {
+    height: 48px;
+  }
+  .header-center h1, .header-center h2 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 18px;
+  }
+  nav ul {
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  nav ul li a {
+    font-size: 15px;
+    padding: 6px 8px;
+  }
+  .section {
+    padding: 24px 8px 80px 8px;
+    margin: 18px auto 80px auto;
+  }
+  .header-center h1, .header-center h2 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 18px;
+  }
+  .logo {
+    height: 48px;
+    width: 48px;
+  }
+}
+@media (max-width: 600px) {
+  .main-header img {
+    height: 36px;
+  }
+  .header-center h1 {
+    font-size: 16px;
+  }
+  .header-center h2 {
+    font-size: 11px;
+  }
+  nav ul li a {
+    font-size: 13px;
+    padding: 4px 4px;
+  }
+  .main-header img {
+    height: 48px;
+  }
+  .header-center h1 {
+    font-size: 22px;
+  }
+  .header-center h2 {
+    font-size: 13px;
+  }
+  nav ul li a {
+    font-size: 15px;
+    padding: 6px 8px;
+  }
+  .section {
+    font-size: 16px;
+    padding: 12px 2px 80px 2px;
+  }
+  .card, .service-highlight, .department-highlight, .welcome, .news, .contact-form, .team {
+    padding: 12px;
+    font-size: 15px;
+  }
+  ul, ol {
+    font-size: 15px;
+    padding-left: 12px;
+  }
+  button, input[type="submit"] {
+    font-size: 15px;
+    padding: 8px 12px;
+  }
+  input, textarea {
+    font-size: 15px;
+    padding: 8px;
+  }
+  footer {
+    font-size: 14px;
+    padding: 12px 0 10px 0;
+  }
+  .logo {
+    height: 36px;
+    width: 36px;
+  }
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+.section, .card, .service-highlight, .department-highlight, .welcome, .news, .contact-form, .team {
+  animation: fadeInUp 0.8s ease;
+}
+
+/* Logo Styling */
+.logo {
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  box-shadow: 0 0 8px #1e7e34;
+  object-fit: cover;
+  max-width: 100%;
+}
 
